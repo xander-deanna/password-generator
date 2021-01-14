@@ -30,7 +30,7 @@ body,
 
 body {
   font-family: sans-serif;
-  background-image: url("./background.jpg");
+  background-image: url("..Assets/background.jpg");
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
