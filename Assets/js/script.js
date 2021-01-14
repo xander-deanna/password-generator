@@ -1,9 +1,6 @@
-//DOM Elements//
-
+//DOM Elements
 var generateBtn = document.getElementById("generateBtn");
-
 var resultEL = document.getElementById("password");
-
 var lengthToggleEl = document.getElementById("length");
 var lowerToggleEl = document.getElementById("lower");
 var capsToggleEl = document.getElementById("caps");
@@ -26,60 +23,32 @@ generateBtn.addEventListener("click", () => {
   var hasNum = numbersToggleEl.checked;
   var hasSpec = specialToggleEl.checked;
   console.log(hasLower, hasCaps, hasNum, hasSpec, length);
-  
-  resultEL.innerText = generatePassword(hasLower, hasCaps, hasNum, hasSpec,length);
+  resultEL.innerText = generatePassword(hasLower, hasCaps, hasNum, hasSpec, length);
 });
 
 //Generate Password Funtion
-var finalPassword = ""
 function generatePassword(lower, caps, number, special, length) {
-
-  if (lower === true && finalPassword.length <= length-1) {
-    finalPassword += getLower();
-  }
-
-  if (caps === true && finalPassword.length <= length-1) {
-    finalPassword += getCaps();
-  }
-
-  if (number === true && finalPassword.length <= length-1) {
-    finalPassword += getNum();
-  }
-      
-  if (special === true && finalPassword.length <= length-1) {
-    finalPassword += getSpecial();
-  };
-  
-console.log("this is the final password: ", finalPassword);
-return finalPassword
-
-};
-
-// {
-//   let generatedPassword = ' ';
-//   var typesCount = lower + caps + number + special;
-//   var typesArr =[{lower }, {caps }, {number }, {special }].filter
-//   console.log(typesCount);
-//     (
-//     item => Object.values(item)[0]
-//     );
-//   console.log("Types count: ", typesCount);
-//   console.log("Types array: ", typesArr);
-
-//   if(typesCount = 0) {
-//     return '';
-//   }
-
-//   for (let i = 0; i < length; i += typesCount) {
-//     typesArr.forEach(type => {
-//       const randomName = Object.keys(type)[0];
-//       console.log(randomName);
-
+  var finalPassword = ""
+  for (var i = 0; i < 200; i++) {
+    if (lower === true && finalPassword.length <= length-1) {
+      finalPassword += getLower();
+    };
     
-//       generatedPassword += random[randomName]();
-//     });
-//   }
-// }
+    if (caps === true && finalPassword.length <= length-1) {
+      finalPassword += getCaps();
+    };
+    
+    if (number === true && finalPassword.length <= length-1) {
+      finalPassword += getNum();
+    };
+            
+    if (special === true && finalPassword.length <= length-1) {
+      finalPassword += getSpecial();
+    };
+    console.log("Final Password: " + finalPassword);
+  };
+  return finalPassword;
+};
 
 //--------------Generator functions-------------------//
 //----------- https://theasciicode.com.ar/ ---------- //
