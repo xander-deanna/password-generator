@@ -19,6 +19,7 @@ var random = {
 
 // Generate Password Event Listener
 generateBtn.addEventListener("click", () => {
+  var finalPassword = ""
   var length = +lengthToggleEl.value;
   var hasLower = lowerToggleEl.checked;
   var hasCaps = capsToggleEl.checked;
@@ -26,39 +27,59 @@ generateBtn.addEventListener("click", () => {
   var hasSpec = specialToggleEl.checked;
   console.log(hasLower, hasCaps, hasNum, hasSpec, length);
   
-  resultEL.innerText = generatePassword(
-    hasLower,
-    hasCaps,
-    hasNum,
-    hasSpec,
-    length
-  );
+  resultEL.innerText = generatePassword(hasLower, hasCaps, hasNum, hasSpec,length);
 });
 
 //Generate Password Funtion
-function generatePassword(lower, caps, number, special,) {
-  let generatedPassword = ' ';
-  var typesCount = lower + caps + number + special;
-  var typesArr =[{lower }, {caps }, {number }, {special }].filter
-    (
-    item => Object.values(item)[0]
-    );
-  console.log("Types count: ", typesCount);
-  console.log("Types array: ", typesArr);
+var finalPassword = ""
+function generatePassword(lower, caps, number, special, length) {
 
-  if(typesCount = 0) {
-    return '';
+  if (lower === true && finalPassword.length <= length-1) {
+    finalPassword += getLower();
   }
 
-  for (let i = 0; i < length; i += typesCount) {
-    typesArr.forEach(type => {
-      const randomName = Object.keys(type)[0];
-      console.log(randomName);
+  if (caps === true && finalPassword.length <= length-1) {
+    finalPassword += getCaps();
+  }
+
+  if (number === true && finalPassword.length <= length-1) {
+    finalPassword += getNum();
+  }
+      
+  if (special === true && finalPassword.length <= length-1) {
+    finalPassword += getSpecial();
+  };
+  
+console.log("this is the final password: ", finalPassword);
+return finalPassword
+
+};
+
+// {
+//   let generatedPassword = ' ';
+//   var typesCount = lower + caps + number + special;
+//   var typesArr =[{lower }, {caps }, {number }, {special }].filter
+//   console.log(typesCount);
+//     (
+//     item => Object.values(item)[0]
+//     );
+//   console.log("Types count: ", typesCount);
+//   console.log("Types array: ", typesArr);
+
+//   if(typesCount = 0) {
+//     return '';
+//   }
+
+//   for (let i = 0; i < length; i += typesCount) {
+//     typesArr.forEach(type => {
+//       const randomName = Object.keys(type)[0];
+//       console.log(randomName);
+
     
-      generatedPassword += random[randomName]();
-    });
-  }
-}
+//       generatedPassword += random[randomName]();
+//     });
+//   }
+// }
 
 //--------------Generator functions-------------------//
 //----------- https://theasciicode.com.ar/ ---------- //
