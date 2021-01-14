@@ -161,11 +161,12 @@ button[disabled] {
 }
 
 #password {
-  -webkit-appearance: none;
-  -moz-appearance: none;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
   appearance: none;
   border: none;
   display: block;
+  color: #7fffd4;
   width: 100%;
   padding-top: 15px;
   padding-left: 15px;
