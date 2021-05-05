@@ -19,7 +19,7 @@ No requirements! Just visit [the deployed site](https://xander-deanna.github.io/
 <br>
             
 ## Usage
-Just visit [the deployed site](hhttps://xander-deanna.github.io/password-generator/) and hit select the desired options to generate your password. This site is hosted by GitHub pages and exists in the browser. There is nothing you'll need to download to check it out. Feel free to check out the [the full repo](https://github.com/xander-deanna/password-generator) as well.
+Just visit [the deployed site](hhttps://xander-deanna.github.io/password-generator/) and select the desired options to generate your password. This site is hosted by GitHub pages and exists in the browser. There is nothing you'll need to download to check it out. Feel free to check out the [the full repo](https://github.com/xander-deanna/password-generator) as well.
 <br>
 <br>
     
