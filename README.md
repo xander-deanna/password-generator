@@ -14,7 +14,7 @@
 <br>
                 
 ## Requirements
-No requirements! Just visit [the deployed site](https://xander-deanna.github.io/password-generator/) and hit "Start Quiz"!
+No requirements! Just visit [the deployed site](https://xander-deanna.github.io/password-generator/) and select the desired options to generate your password!
 <br>
 <br>
             
